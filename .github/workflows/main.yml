@@ -1,0 +1,13 @@
+name: Hello world
+
+on: [push]
+
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print message for chetan
+        run: echo "This is Hello World from YAML file"
+      - name: Print message for Yogesh
+        run: echo "This is Hello world from YAML file 2"
+        
