@@ -1,24 +1,25 @@
 name: Hello world
 
 on: [push]
-env:
-  name: Chetankumar Kulkarni
-  desig: Senior System Administrator
-  company: Altera Digital
-  contact: 9823557070
+
 jobs:
   hello:
-    runs-on: ubuntu-latest
-         
+    runs-on: ubuntu-latest 
     steps:
       - name: Print message Job 1
-        run: echo "Hello $name"
+        run: |
+          echo "Hello ${{ vars.NAME }}"
+          echo "My Repository name is ${{ github.repository }}"
       - name: Print message Job 2
-        run: echo "Your Current Designation is $desig"
+        run: |
+          echo "Your Current Designation is ${{ vars.DESIG }}"
+          echo "Your workflow name is ${{ github.workflow }}"
       - name: Print message Job 3
-        run: echo "My current organation is $company"  
+        run: |
+          echo "My current organation is ${{ vars.COMPANY }}"  
       - name: Print message Job 4
-        run: echo "My current contact number is $contact"
+        run: |
+          echo "My current contact number is ${{ vars.CONTACT }}"
         
           
         
