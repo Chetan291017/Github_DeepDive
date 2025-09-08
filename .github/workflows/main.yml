@@ -1,15 +1,19 @@
 name: Hello world
 
 on: [push]
-
+env: Chetankumar Kulkarni
 jobs:
   hello:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
+    env:
+      desig: Senior System Administrator
     steps:
-      - name: Print message for chetan
-        run: echo "This is Hello World from YAML file"
-      - name: Print message for Yogesh
-        run: echo "This is Hello world from YAML file 2"
-      - name: Print message Job 3 for Bala Sir
-        run: echo "Good morning sir"  
+      - name: Print message Job 1
+        run: echo "Hello $name"
+      - name: Print message Job 2
+        run: echo "Your Current Designation is $desig"
+      - name: Print message Job 3
+        run: echo "My current organation is $company"  
+        env:
+          company: Altera Digital
         
