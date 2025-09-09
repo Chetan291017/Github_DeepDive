@@ -1,4 +1,4 @@
-name: Hello world
+ name: Hello world
 
 on: [push]
 
@@ -20,6 +20,6 @@ jobs:
       - name: Print message Job 4
         run: |
           echo "My current contact number is ${{ vars.CONTACT }}"
-        
+          echo "My SSH Key Value is ${{ secerts.MY_SSH_KEY }}"
           
         
