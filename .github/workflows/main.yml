@@ -20,6 +20,6 @@ jobs:
       - name: Print message Job 4
         run: |
           echo "My current contact number is ${{ vars.CONTACT }}"
-          echo "My SSH Key Value is ${{ secerts.MY_SSH_KEY }}"
+          echo "My SSH Key Value is ${{ secrets.MY_SSH_KEY }}"
           
         
